@@ -10,10 +10,6 @@ MRI and surface files (pial & white matter) were taken from the Human Connectome
 
 > The specified protocol defined in these scripts are those used in the following article: "Evans, C., Zich, C., Lee, J. S., Ward, N., & Bestmann, S. (accepted). Inter-individual variability in current direction for common tDCS montages. NeuroImage."
 
-## SCRIPTS
-
-> Data analysis from Evans et al., (2022) can be replicated using the following scripts 
-
 FOLDERS
 > @gifti: required to convert files to geometry format (c) Wellcome Trust Centre for Neuroimaging
 > geodesic: required to remove ROI overlap (c) Danil Kirsanov
