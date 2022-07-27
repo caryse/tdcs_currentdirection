@@ -21,7 +21,7 @@ create gm surface: scripts to create grey matter surface
 
 create rois: scripts to define ROIs
 
-locate electrodes motor strips: scripts to define electrode locations & motor strip 
+locate electrodes motor strip: scripts to define electrode locations & motor strip 
 
 ### SCRIPTS:
 calculate_angle_snorm_efield.m - calculate angle between e-field direction & grey matter surface/ROI
