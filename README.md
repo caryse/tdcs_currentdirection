@@ -40,11 +40,11 @@ build_roi_patches.m - build ROI patch and remove overlap of adjacent ROIs (e.g. 
 
 motor_strip_coords.m - define coordinates for motor strip
 
-get_elec_coords.m - extract electrode coordinates from ROAST
+get_elec_coords.m - extract electrode location coordinates from ROAST
 
 roast2.m - called by 'get_elec_coords.m'. Runs roast model until electrode placement
 
-electrodePlacement2.m - called by 'get_elec_coords.m'. Outputs electrode coordinates defined by ROAST
+electrodePlacement2.m - called by 'get_elec_coords.m'. Outputs electrode location coordinates defined by ROAST
 
 
 
