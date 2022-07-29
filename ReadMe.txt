@@ -8,7 +8,7 @@ spm12 (https://www.fil.ion.ucl.ac.uk/spm/software/spm12/) was used for data pre-
 
 MRI and surface files (pial & white matter) were taken from the Human Connectome Project (HCP) database (http://ida.loni.usc.edu/login/jsp). 
 
-> The specified protocol defined in these scripts are those used in the following article: "Evans, C., Zich, C., Lee, J. S., Ward, N., & Bestmann, S. (accepted). Inter-individual variability in current direction for common tDCS montages. NeuroImage."
+> The specified protocol defined in these scripts are those used in the following article: "Evans, C., Zich, C., Lee, J. S., Ward, N., & Bestmann, S. (2022). Inter-individual variability in current direction for common tDCS montages. NeuroImage. https://doi.org/10.1016/j.neuroimage.2022.119501"
 
 FOLDERS
 > @gifti: required to convert files to geometry format (c) Wellcome Trust Centre for Neuroimaging
