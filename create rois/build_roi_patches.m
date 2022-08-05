@@ -18,7 +18,6 @@
 global geodesic_library;
 geodesic_library = 'geodesic_debug';      %"release" is faster and "debug" does additional checks
 addpath(genpath('\PATH\TO\TOOLBOX\geodesic_matlab-master\')); %geodesic toolbox
-%MAIN_PATH = '/Users/catharinazich/Desktop/UCL_Carys/surf_coords_catha/';
 surfPATH = 'D:\PATH\TO\SURFACE\DATA\';         %surface path
 cfmPATH = 'D:\PATH\TO\ROAST\MODELS\';          %ROAST models
 
