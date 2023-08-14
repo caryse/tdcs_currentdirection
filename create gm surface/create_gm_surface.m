@@ -76,27 +76,32 @@ surftype = {'pial','white'};       %surface being converted. Also filename.
 
 %subject folders
 cd(freepath)
-k = dir('1*'); subj={k.name}';      %subject folders begin with '1'
+%k = dir('1*'); subj={k.name}';      %subject folders begin with '1'
+disp('select subject folder containing freesurfer data (i.e. folder containing "surf" folder)')
+surfPATH = uigetdir; surfPATH = [surfPATH,'/'];
+slashIdx = strfind(surfPATH, '/');
+subj = extractBetween(surfPATH, (slashIdx(1,end-1)+1),(slashIdx(1,end)-1));
+clear slashIdx
 
 
 %% Read in each hemisphere's gifti file and adjust for RAS offset
 for sub=1:length(subj)        %Loop for each subject
     
-    surfdir = [freepath, sprintf('%s/%s/surf/',subj{sub},subj{sub})];
+    surfdir = [freepath, sprintf('%s/surf/',subj{sub})];
     
     %specify RAS offset
-    ras_offset=dlmread([freepath, sprintf('%s/%s/surf/rasoffset.txt',subj{sub},subj{sub})]);
+    ras_offset=dlmread([freepath, sprintf('%s/surf/rasoffset.txt',subj{sub})]);
     
     for i=1:size(surftype,2)
         
         for j=1:size(hemfile,2)   %Repeat for each hemisphere
-            g=gifti([freepath, sprintf('%s/%s/surf/%s.%s.gii',subj{sub},subj{sub},hemfile{j},surftype{i})]);
+            g=gifti([freepath, sprintf('%s/surf/%s.%s.gii',subj{sub},hemfile{j},surftype{i})]);
             % Set transformation matrix to identify
             g.mat=eye(4);
             g=set_mat(g,'NIFTI_XFORM_UNKNOWN','NIFTI_XFORM_TALAIRACH');
             % Apply RAS offset
             g.vertices=g.vertices+repmat(ras_offset,size(g.vertices,1),1);
-            save(g,[freepath,sprintf('%s/%s/surf/ro_%s.%s.gii',subj{sub},subj{sub},hemfile{j},surftype{i})]);
+            save(g,[freepath,sprintf('%s/surf/ro_%s.%s.gii',subj{sub},hemfile{j},surftype{i})]);
             
             clear g
         end
