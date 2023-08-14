@@ -21,13 +21,19 @@
 %nb: may need to setup freesurfer in terminal 1st
 
 %AUTOMATIC METHOD:
-%%paste following into bash terminal (e.g Ubuntu)
+%%paste following into bash terminal (e.g Ubuntu or Terminal)
 %%script does following:
 %%- retrieves subject file path
 %%- converts surfaces to gifti
 %%- obtains ras offset and saves to txt file 'rasoffset'
 %%- outputs subject directory to check correct
 
+%%Start Freesurfer
+%export FREESURFER_HOME="/path/to/freesurfer"
+%export SUBJECTS_DIR=/path/to/subjects_dir/
+%source $FREESURFER_HOME/SetUpFreeSurfer.sh
+
+%%Convert surfaces and obtain ras offset
 % for dir in /mnt/d/NIHdata/*/*/ %(subject file path)
 % do #for loop
 % cd $dir/surf
