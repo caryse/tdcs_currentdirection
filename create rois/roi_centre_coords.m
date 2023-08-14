@@ -99,7 +99,7 @@ for sub = 1:length(subj_cfm) %change to subj if subj_cfm not required
     
     %select ROI coordinates
     %cd([surfPATH, sprintf('%s',subj{sub})]); %subject folder within surface path  
-    cd([surfPATH,'surf/'); %subject folder within surface path   
+    cd(surfPATH); %subject folder within surface path   
 
     
     %load ROI file if created previously or plot surface & identify ROI coordinates
