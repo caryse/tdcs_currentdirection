@@ -13,15 +13,10 @@
 %% Define file names and directories
 
 %set directories
-% addpath(genpath('C:\Matlab2018b\spm12\'));           %spm
-% surfPATH = 'D:\SURFACE\DATA\';                       %surface pathway
-% cfmPATH = 'D:\ROAST\MODELS\';                        %roast models
-% ROIPATH = 'D:\ROI\DATA\';                            %ROI pathway
-
-addpath(genpath('/Users/carysevans/Documents/MATLAB/spm12/'));           %spm
-surfPATH = '/Users/carysevans/Desktop/directionWlkthru/Joyce/';                       %surface pathway
-cfmPATH = '/Users/carysevans/Desktop/directionWlkthru/tDCS_simulation/';                        %roast models
-ROIPATH = '/Users/carysevans/Desktop/directionWlkthru/Joyce/';                            %ROI pathway
+addpath(genpath('C:\Matlab2018b\spm12\'));           %spm
+surfPATH = 'D:\SURFACE\DATA\';                       %surface pathway
+cfmPATH = 'D:\ROAST\MODELS\';                        %roast models
+ROIPATH = 'D:\ROI\DATA\';                            %ROI pathway
 
 %filenames
 %Roast result after 'subjectID_'
@@ -329,10 +324,10 @@ for mont = 1:length(cfmResultFile)
         % CALCULATE ANGLE BETWEEN SNORM AND EF NORM
         %%===============================================
         
-        %% GREY MATTER - Calculate ANGLE between snorm and ef vectors: cos(?) = a · b / (|a| x |b|)
+        %% GREY MATTER - Calculate ANGLE between snorm and ef vectors: cos(?) = a Â· b / (|a| x |b|)
         
-        % a · b = snorm · ef_vec (surface norm vectors & ef vectors)
-        normDotP = dot(snorm,ef_vec,2); %dot product: snorm · ef_vec
+        % a Â· b = snorm Â· ef_vec (surface norm vectors & ef vectors)
+        normDotP = dot(snorm,ef_vec,2); %dot product: snorm Â· ef_vec
         
         %|a| = magnitude of snorm
         snorm_mag(:,1) = sqrt((snorm(:,1).^2)+(snorm(:,2).^2)+(snorm(:,3).^2));
@@ -349,14 +344,14 @@ for mont = 1:length(cfmResultFile)
         %angle in radians rather than degrees (useful for Polar Plots)
         anglerad = acos(cos_ang);
                 
-        %% ROI - Calculate angle between meanSNORM and meanEFNORM vectors:  cos(?) = a · b / (|a| x |b|)
+        %% ROI - Calculate angle between meanSNORM and meanEFNORM vectors:  cos(?) = a Â· b / (|a| x |b|)
         
         % ========================
         % WHOLE ROI
         % ========================
         
-        % a · b = snorm · ef_vec (surface norm vectors & ef vectors)
-        normDotP_ROI = dot(snormROI,efvec_inROI,2); %dot product: snorm · ef_norm (could also do ef_vec)
+        % a Â· b = snorm Â· ef_vec (surface norm vectors & ef vectors)
+        normDotP_ROI = dot(snormROI,efvec_inROI,2); %dot product: snorm Â· ef_norm (could also do ef_vec)
         
         %|a| = magnitude of snorm
         snormROI_mag= sqrt((snormROI(:,1).^2)+(snormROI(:,2).^2)+(snormROI(:,3).^2));        
@@ -377,8 +372,8 @@ for mont = 1:length(cfmResultFile)
         % MEANS W/IN ROI
         % ========================
         
-        % a · b = snorm · ef_vec (surface norm vectors & ef vectors)
-        normDotP_meanROI = dot(meanSNORMinROI,meanEFNORMinROI,2); %dot product: snorm · ef_norm (could also do ef_vec)
+        % a Â· b = snorm Â· ef_vec (surface norm vectors & ef vectors)
+        normDotP_meanROI = dot(meanSNORMinROI,meanEFNORMinROI,2); %dot product: snorm Â· ef_norm (could also do ef_vec)
         
         %|a| = magnitude of snorm
         snormROImean_mag(:,1)= sqrt((meanSNORMinROI(:,1).^2)+(meanSNORMinROI(:,2).^2)+(meanSNORMinROI(:,3).^2));
