@@ -25,7 +25,8 @@ SCRIPTS:
 > combine_surfaces.m - called by 'create_gm_surface.m'. Combines L & R hemisphere surfaces
 > write_surf_gifti.m - called by 'create_gm_surface.m'. Converts surface to gifti format
 > roi_centre_coords.m - define central coordinates for ROI
-> build_roi_patches.m - build ROI patch and remove overlap of adjacent ROIs (e.g. M1 bank & crown)
+> build_roi_patches.m - build ROI patches and remove overlap of adjacent ROIs (e.g. M1 bank & crown)
+> build_single_roi_patch.m - builds single ROI patch. Alternative to build_roi_patches.m
 > motor_strip_coords.m - define coordinates for motor strip
 > get_elec_coords.m - extract electrode location coordinates from ROAST
 > roast2.m - called by 'get_elec_coords.m'. Runs roast model until electrode placement
