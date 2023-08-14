@@ -17,13 +17,9 @@
 
 global geodesic_library;
 geodesic_library = 'geodesic_debug';      %"release" is faster and "debug" does additional checks
-% addpath(genpath('\PATH\TO\TOOLBOX\geodesic_matlab-master\')); %geodesic toolbox
-% surfPATH = 'D:\PATH\TO\SURFACE\DATA\';         %surface path
-% cfmPATH = 'D:\PATH\TO\ROAST\MODELS\';          %ROAST models
-
-addpath(genpath('/Users/carysevans/Desktop/directionWlkthru/scripts/tdcs_currentdirection-main/')); %geodesic toolbox
-surfPATH = '/Users/carysevans/Desktop/directionWlkthru/Joyce/';                                     %surface path
-cfmPATH = '/Users/carysevans/Desktop/directionWlkthru/tDCS_simulation/';                            %ROAST models
+addpath(genpath('\PATH\TO\TOOLBOX\geodesic_matlab-master\')); %geodesic toolbox
+surfPATH = 'D:\PATH\TO\SURFACE\DATA\';         %surface path
+cfmPATH = 'D:\PATH\TO\ROAST\MODELS\';          %ROAST models
 
 % params
 %Region = {'S1','M1'};
