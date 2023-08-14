@@ -32,7 +32,7 @@ cfmResultFile = 'CP3FCZ_2mA_roastResult.mat';       %ROAST result file (after su
 gmfilename = 'ro_white-pial';                       %grey matter mask file
 
 %desired ROI filename. Repeat for each ROI
-ROIfile = 'M1bankcoord.mat';                            %e.g. M1 bank coordinates                     
+ROIfile = 'M1coord.mat';                            %e.g. M1 bank coordinates                     
 
 showROI = 1; %Display selected ROI centrepoint on surface? 1 = yes, 0 = no.
 
